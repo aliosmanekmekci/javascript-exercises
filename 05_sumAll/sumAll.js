@@ -1,12 +1,12 @@
-const sumAll = function (param1, param2) {
-  let sum = 0;
-  if (param1 < param2 && param1 && param2) {
-    for (let i = param1; i <= param2; i++) {
-      sum += i;
-    }
-    return sum;
-  }
+const sumAll = function (min, max) {
+  if (!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+  if (min < 0 || max < 0) return "ERROR";
+
+  // Swap min and max if necessary
+  [min, max] = [Math.min(min, max), Math.max(min, max)];
+
+  // Calculate sum using the formula for sum of arithmetic series
+  return ((max - min + 1) * (min + max)) / 2;
 };
 
-// Do not edit below this line
 module.exports = sumAll;
