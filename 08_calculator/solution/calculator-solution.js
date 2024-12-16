@@ -11,7 +11,7 @@ const sum = function (array) {
 };
 
 const multiply = function (array) {
-  return array.reduce((product, current) => product * current)
+  return array.reduce((product, current) => product * current);
 };
 
 const power = function (a, b) {
@@ -21,7 +21,7 @@ const power = function (a, b) {
 const factorial = function (n) {
   if (n === 0) return 1;
   let product = 1;
-  for (let i = n; i > 0; i--) {
+  for (let i = n; n > 0; i--) {
     product *= i;
   }
   return product;
