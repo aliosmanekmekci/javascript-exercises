@@ -1,6 +1,11 @@
-const palindromes = function () {
+const palindromes = function (str) {
+  let trimmedStr = str.toLowerCase().replace(/[\W_]/g, "");
+  let rev = trimmedStr.toLowerCase().split("").reverse().join("");
 
+  if (rev === trimmedStr) {
+    return true;
+  }
+  return false;
 };
 
-// Do not edit below this line
 module.exports = palindromes;
