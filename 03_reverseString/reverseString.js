@@ -1,7 +1,7 @@
 const reverseString = function (param) {
   let paramToArr = param;
   const ans = paramToArr.split("").reverse().join("");
-    return ans;
+  return ans;
 };
 reverseString("hey");
 // Do not edit below this line
